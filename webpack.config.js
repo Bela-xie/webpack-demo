@@ -7,7 +7,7 @@ module.exports = {
     ...base,
     mode: "development",
     module: {
-        rules: [{
+        rules: [...base.module.rules,{
             test: /\.css$/i,
             use: ["style-loader", "css-loader"],
         }, ],
