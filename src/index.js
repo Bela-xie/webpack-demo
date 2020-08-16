@@ -9,11 +9,11 @@ const div = document.getElementById("app");
 //     <img src='${png}'>
 // `;
 const btn = document.createElement("button");
-btn.innerText = "懒懒加载功能";
+btn.innerText = "懒懒懒加载功能";
 btn.onclick = () => {
-    const promise = import("./lazy.js");
-    promise.then((module) => {
-        module.default();
-    });
+  const promise = import("./lazy.js");
+  promise.then((module) => {
+    module.default();
+  });
 };
 div.appendChild(btn);
