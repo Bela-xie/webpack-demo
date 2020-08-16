@@ -5,15 +5,15 @@ import "./z.styl";
 import png from "./assets/1.png";
 
 const div = document.getElementById("app");
-div.innerHTML = `
-    <img src='${png}'>
-`;
-const btn = document.createElement('button');
-btn.innerText = '懒加载'
+// div.innerHTML = `
+//     <img src='${png}'>
+// `;
+const btn = document.createElement("button");
+btn.innerText = "懒加载";
 btn.onclick = () => {
-    const promise = import('./lazy.js')
-    promise.then(module => {
-        module.default()
-    })
-}
-div.appendChild(btn)
+  const promise = import("./lazy.js");
+  promise.then((module) => {
+    module.default();
+  });
+};
+div.appendChild(btn);
