@@ -9,7 +9,7 @@ const div = document.getElementById("app");
 //     <img src='${png}'>
 // `;
 const btn = document.createElement("button");
-btn.innerText = "懒加载";
+btn.innerText = "懒加载功能";
 btn.onclick = () => {
   const promise = import("./lazy.js");
   promise.then((module) => {
